@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BekNazorat — Maxfiylik siyosati</title>
+<style>
+  :root{ --bg:#ffffff; --fg:#0F2A1E; --muted:#4E7D66; --accent:#0E8F4F; --card:#F2F8F5; --line:#DCEFE5; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#0F1A14; --fg:#E8F3EC; --muted:#9FD6B9; --accent:#2FbF77; --card:#17271E; --line:#24382B; } }
+  :root[data-theme="dark"]{ --bg:#0F1A14; --fg:#E8F3EC; --muted:#9FD6B9; --accent:#2FbF77; --card:#17271E; --line:#24382B; }
+  *{box-sizing:border-box}
+  body{ margin:0; background:var(--bg); color:var(--fg); font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.65; }
+  .wrap{ max-width:820px; margin:0 auto; padding:32px 16px 80px; }
+  h1{ font-size:1.9rem; margin:0 0 4px; }
+  h2{ font-size:1.25rem; margin:34px 0 10px; color:var(--accent); }
+  h3{ font-size:1.05rem; margin:20px 0 6px; }
+  .sub{ color:var(--muted); margin:0 0 24px; }
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; margin:14px 0; }
+  ul{ margin:8px 0; padding-left:22px; } li{ margin:5px 0; }
+  a{ color:var(--accent); } code{ background:var(--card); padding:2px 6px; border-radius:6px; }
+  .muted{ color:var(--muted); font-size:.92rem; }
+  hr{ border:none; border-top:1px solid var(--line); margin:28px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>BekNazorat — Maxfiylik siyosati</h1>
+  <p class="sub">Oxirgi yangilanish: 2026-yil 27-oktabr</p>
+
+  <div class="card">
+    <strong>Qisqacha.</strong> BekNazorat — ota-onalarga farzandining xavfsizligini kuzatishda yordam beradigan
+    ilova. Biz faqat ushbu xizmat ishlashi uchun zarur ma'lumotlarni yig'amiz, ularni
+    <strong>sotmaymiz</strong> va faqat farzandning o'z ota-onasiga ko'rsatamiz. Bola ilovasi
+    <strong>yashirin emas</strong> — u ochiq ishlaydi va kuzatuv borligini ko'rsatadi.
+  </div>
+
+  <h2>1. Biz kim haqimizda</h2>
+  <p>BekNazorat ikki ilovadan iborat: <strong>BekNazorat Ota-ona</strong> (nazorat paneli) va
+  <strong>BekNazorat Bola</strong> (farzand telefonida). Ilova O'zbekiston uchun mo'ljallangan.</p>
+
+  <h2>2. Biz qanday ma'lumot yig'amiz</h2>
+  <h3>Ota-ona hisobidan:</h3>
+  <ul>
+    <li>Email manzili (hisobga kirish va 6 xonali kod bilan tasdiqlash uchun)</li>
+    <li>Ism (ixtiyoriy, profil uchun)</li>
+  </ul>
+  <h3>Farzand qurilmasidan (ota-ona ulagandan keyin):</h3>
+  <ul>
+    <li><strong>Joylashuv</strong> — xaritada ko'rsatish, yo'l tarixi va xavfsiz hudud ogohlantirishlari uchun (shu jumladan ilova yopiq bo'lganda fon rejimida)</li>
+    <li><strong>Ekran vaqti va ilovalar statistikasi</strong> — qaysi ilova qancha ishlatilgani (faqat davomiylik; xabarlar yoki ilova ichidagi kontent <strong>o'qilmaydi</strong>)</li>
+    <li><strong>O'rnatilgan ilovalar ro'yxati</strong> — ota-ona cheklashni belgilashi uchun</li>
+    <li><strong>Qurilma holati</strong> — batareya darajasi, internet holati, ruxsatlar holati, ilova versiyasi</li>
+    <li><strong>SOS signali</strong> — farzand tugmani bosganda joylashuvi bilan</li>
+  </ul>
+  <div class="card muted">Biz <strong>kamera, mikrofon, ekran tasviri, SMS matni, qo'ng'iroqlar yoki
+  shaxsiy yozishmalarni YIG'MAYMIZ</strong>. Ilova bunday ma'lumotlarga kira olmaydi.</div>
+
+  <h2>3. Ma'lumotdan qanday foydalanamiz</h2>
+  <ul>
+    <li>Farzandning joylashuvini va qurilma holatini ota-onaga ko'rsatish</li>
+    <li>Xavfsiz hududga kirish/chiqishda va SOS bosilganda ota-onani ogohlantirish</li>
+    <li>Ota-ona belgilagan ilova cheklovlari va vaqt jadvallarini qo'llash</li>
+    <li>Ekran vaqti statistikasi va haftalik hisobotlarni shakllantirish</li>
+  </ul>
+  <p>Biz bu ma'lumotlardan <strong>reklama uchun foydalanmaymiz</strong> va uchinchi tomonlarga sotmaymiz.</p>
+
+  <h2>4. Ma'lumot kim bilan ulashiladi</h2>
+  <ul>
+    <li><strong>Faqat farzandning o'z ota-onasi</strong> (ilovaga kirgan hisob) ma'lumotni ko'radi.</li>
+    <li>Ma'lumotlar bazasida qat'iy himoya (Row Level Security) qo'llangan — har bir oila faqat o'z ma'lumotini ko'radi.</li>
+    <li>Texnik xizmat ko'rsatuvchilar: <strong>Supabase</strong> (ma'lumotlar bazasi), <strong>Resend</strong>
+      (email tasdiqlash kodlari) va <strong>Google Firebase</strong> (bildirishnomalar). Ular ma'lumotni
+      faqat xizmatni ishlatish uchun qayta ishlaydi.</li>
+    <li>Qonun talab qilgan hollardan tashqari, hech kimga oshkor qilinmaydi.</li>
+  </ul>
+
+  <h2>5. Bolalar ma'lumoti</h2>
+  <p>Ilova <strong>ota-ona nazorati</strong> uchun mo'ljallangan. Farzand ma'lumoti faqat
+  <strong>ota-onaning roziligi va boshqaruvi ostida</strong> yig'iladi. Bola ilovasi qurilmada
+  <strong>ochiq ko'rinadi</strong> va kuzatuv faol ekanligini bildiradi (yashirin josuslik emas).
+  Ota-ona istalgan vaqtda kuzatuvni to'xtatishi va ma'lumotni o'chirishi mumkin.</p>
+
+  <h2>6. Ma'lumot saqlash va o'chirish</h2>
+  <ul>
+    <li>Ma'lumotlar xizmat ishlashi uchun zarur muddat davomida saqlanadi.</li>
+    <li>Ota-ona farzand qurilmasini hisobdan uzishi — kuzatuvni to'xtatadi.</li>
+    <li>Ota-ona ilova ichidan <strong>hisobni butunlay o'chirishi</strong> mumkin — barcha bog'liq ma'lumotlar o'chadi.</li>
+  </ul>
+
+  <h2>7. Xavfsizlik</h2>
+  <p>Ma'lumotlar internet orqali shifrlangan (HTTPS) uzatiladi va himoyalangan serverlarda saqlanadi.
+  Har bir foydalanuvchi faqat o'ziga tegishli ma'lumotga kira oladi.</p>
+
+  <h2>8. Ruxsatlar (nega kerak)</h2>
+  <ul>
+    <li><strong>Joylashuv (fon rejimida)</strong> — farzand telefonida ilova yopiq bo'lsa ham joylashuvni ota-onaga yuborish uchun</li>
+    <li><strong>Foydalanish statistikasi</strong> — ekran vaqtini hisoblash uchun</li>
+    <li><strong>Maxsus imkoniyatlar (Accessibility)</strong> — ota-ona cheklagan ilovalarni ochilganda yopish uchun</li>
+    <li><strong>Bildirishnomalar</strong> — SOS va muhim ogohlantirishlar uchun</li>
+    <li><strong>Fon xizmati / batareya cheklovidan ozod</strong> — SOS signali telefon qulf bo'lganda ham darhol kelishi uchun</li>
+  </ul>
+
+  <h2>9. O'zgarishlar</h2>
+  <p>Ushbu siyosat yangilanishi mumkin. Muhim o'zgarishlar ilova orqali e'lon qilinadi.</p>
+
+  <h2>10. Bog'lanish</h2>
+  <p>Savollar bo'yicha biz bilan bog'laning:</p>
+  <ul>
+    <li>Email: <a href="mailto:beknod94@gmail.com">beknod94@gmail.com</a></li>
+    <li>Telegram: <a href="https://t.me/+2cNR_D5QbRk1YmM6">BekNazorat kanali</a></li>
+  </ul>
+
+  <hr/>
+  <p class="muted">© 2026 BekNazorat. Ushbu sahifa ilova maxfiylik siyosati sifatida ommaga ochiq joylashtirilgan.</p>
+</div>
+</body>
+</html>
